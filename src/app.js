@@ -6,22 +6,22 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  let array = [
-    "I'm too busy today, how about tomorrow?",
-    "Yesterday I feel bad, today I'm staying home.",
-    "Please call me later",
-    "I'm AFK today."
-  ];
+  let person = ["I", "You", "he"];
+  let act = ["sleep", "eat", "jump", "cry", "dance", "fly"];
+  let what = ["dragons", "cake", "bed", "pokemons", "phone", "mouse"];
+  let when = ["tomorrow", "yesterday", "today", "never"];
+
   let website = document.querySelector("#msg");
-  console.log(array);
-  let contenido;
-
-  for (let i = 0; i < array.length; i++) {
-    contenido = array[i];
-  }
-  let random = Math.floor(Math.random() * array.length);
-  console.log(random, array[random]);
-
-  website.innerHTML = array[random];
+  let contenido =
+    "<p>" +
+    person[Math.floor(Math.random() * person.length)] +
+    " " +
+    act[Math.floor(Math.random() * act.length)] +
+    "<p>" +
+    what[Math.floor(Math.random() * what.length)] +
+    " " +
+    when[Math.floor(Math.random() * when.length)] +
+    "</p>";
+  website.innerHTML = contenido;
+  console.log(website);
 };
